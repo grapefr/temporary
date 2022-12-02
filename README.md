@@ -5,5 +5,11 @@
 
 ## React 에서 SVG를 Load 하는 방법
    - \<img \/> 내 src를 추가
-   - xml 형식으로 render 함수에 추가
-   - react component , element로 변환 후 render 함수 추가
+   - namespace attr 치환 후 render 추가
+   - react component , element로 변환 후 render 추가
+
+
+###\<img \/> 내 src를 추가
+```Javascript
+<img src="./svg.svg" />
+```

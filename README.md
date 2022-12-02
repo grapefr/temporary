@@ -34,6 +34,7 @@ flowchart LR
   - onclick="eventHandler(val)"
   - mnemonic="AAAAA"
   - nextlv="next mnemonic name"
+  - input="true"
   - script="AAAAA & BBBBB" => 표준 협의 필요      
 - 결과
 ```xml

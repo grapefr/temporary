@@ -1,5 +1,5 @@
 # SVG React 활용방안
-목적 : React에서 SVG 를 Load 하여 특정 atrribute , value , Style을 제어
+목적 : React에서 SVG 를 Load 하여 특정 attribute , value , Style을 제어
 
 
 

@@ -29,3 +29,34 @@ Online converter : [svg2jsx](https://www.svgviewer.dev/svg-to-react-jsx)
 flowchart LR
     VISIO -- 1차가공 --> SVG -- 2차가공 --> SVG_v2 --> n차가공 --> SVG_vN --> React_load
 ```
+### 1차가공
+- 스탠실을 이용한 Custom Props 추가
+  - onclick="eventHandler(val)"
+  - mnemonic="AAAAA"
+  - nextlv="next mnemonic name"
+  - script="AAAAA & BBBBB" => 표준 협의 필요      
+- 결과
+```xml
+	<style type="text/css">
+	<![CDATA[
+		.st18 {fill:#3f3f3f;stroke:#bfbfbf;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+	]]>
+	</style>
+<g id="shape431-243" v:mID="431" v:groupContext="shape" transform="translate(379.276,-871.654)">
+	<title>시트.431</title>
+	<v:custProps>
+		<v:cp v:nameU="Row_1" v:lbl="onClick" v:type="0" v:langID="1033" v:val="VT4(LNA Controller(detail))"/>
+		<v:cp v:nameU="Row_2" v:lbl="mnemonic" v:type="0" v:langID="1042" v:val="VT4(AAAAAA)"/>
+		<v:cp v:nameU="Row_2" v:lbl="nextlv" v:type="0" v:langID="1042" v:val="VT4(next mnemonic name)"/>
+	</v:custProps>
+	<v:userDefs>
+		<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+		<v:ud v:nameU="CPMSetList" v:prompt="[CPM11]mnemonic,onClick" v:val="VT4(visioTest)"/>
+	</v:userDefs>
+	<g id="shadow431-244" v:groupContext="shadow" v:shadowOffsetX="2.44929E-16" v:shadowOffsetY="-4" v:shadowType="3"
+			transform="matrix(1,0,0,1,0,4)" class="st13"/>
+	<rect x="0" y="1085.74" width="297.638" height="28.2784" class="st18"/>
+	</g>
+</g>
+```   
+### 2차가공

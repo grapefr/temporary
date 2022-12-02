@@ -9,7 +9,7 @@
 ```Javascript
 <img src="./svg.svg" />
 ```   
-### 2. svg 내 namespace 형식 치환 후 render ( 보 )
+### 2. svg 내 namespace 형식 치환 후 render
 Visio에서 Export한 SVG 파일 그대로 사용 불가 아래와 같이 치환 필요
 단, svg row file 이나 마찬가지므로 react에서 제어 불가 ( javascript로 가능 )
 |AS-IS	|TO-BE|

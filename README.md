@@ -64,7 +64,7 @@ flowchart LR
 ### 2차가공
 - css 우선순위 조정을 위한 style(Class) inline 적용
 - CustomProps attribute로 변환 & inline 재배치   
-결과
+- 결과
 ```xml
 <g id="shape431-243" v:mID="431" v:groupContext="shape" transform="translate(379.276,-871.654)">
 	<title>시트.431</title>
@@ -77,4 +77,40 @@ flowchart LR
 	<rect x="0" y="1085.74" width="297.638" height="28.2784" fill="#3f3f3f" stroke="#bfbfbf" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" onclick="eventhandler()" mnemonic="AAAAA" nextlv="next mnemonic name" />
 	</g>
 </g>
+```
+### 3차가공 (선택사항)
+- script 추가 ( 선,후행 mnemonic 비교하여 특정 mnemonic 제어 )
+```xml
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="6cm" height="5cm" viewBox="0 0 600 500"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <desc>Example script01 - invoke an ECMAScript function from an onclick event
+  </desc>
+  <!-- ECMAScript to change the radius with each click -->
+  <script type="application/ecmascript"> <![CDATA[
+    function circle_click(evt) {
+      var circle = evt.target;
+      var currentRadius = circle.getAttribute("r");
+      if (currentRadius == 100)
+        circle.setAttribute("r", currentRadius*2);
+      else
+        circle.setAttribute("r", currentRadius*0.5);
+    }
+  ]]> </script>
+
+  <!-- Outline the drawing area with a blue line -->
+  <rect x="1" y="1" width="598" height="498" fill="none" stroke="blue"/>
+
+  <!-- Act on each click event -->
+  <circle onclick="circle_click(evt)" cx="300" cy="225" r="100"
+          fill="red"/>
+
+  <text x="300" y="480" 
+        font-family="Verdana" font-size="35" text-anchor="middle">
+
+    Click on circle to change its size
+  </text>
+</svg>
 ```

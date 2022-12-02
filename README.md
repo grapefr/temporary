@@ -145,3 +145,6 @@ flowchart LR
 - POC 진행을 위하여 SVG 파일을 Load, React Component로 변환하기로 결정.
 - 변환 Tool은 svgo 를 활용.
 - 앞선 1~4차 가공은 선처리로 완료되었다고 가정.
+
+### 변환 후 남은 작업
+- 선,후행 mnemonic 상태 비교하여 특정 mnemonic 제어 Function 추가

@@ -9,7 +9,7 @@
    - react component , element로 변환 후 render 추가
 
 
-###\<img \/> 내 src를 추가
+### \<img \/> 내 src를 추가
 ```Javascript
 <img src="./svg.svg" />
 ```

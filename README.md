@@ -42,6 +42,7 @@ flowchart LR
 		.st18 {fill:#3f3f3f;stroke:#bfbfbf;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
 	]]>
 	</style>
+.... 중간 생략
 <g id="shape431-243" v:mID="431" v:groupContext="shape" transform="translate(379.276,-871.654)">
 	<title>시트.431</title>
 	<v:custProps>
@@ -60,3 +61,19 @@ flowchart LR
 </g>
 ```   
 ### 2차가공
+- css 우선순위 조정을 위한 style(Class) inline 적용
+- CustomProps attribute로 변환 & inline 재배치   
+결과
+```xml
+<g id="shape431-243" v:mID="431" v:groupContext="shape" transform="translate(379.276,-871.654)">
+	<title>시트.431</title>
+	<v:userDefs>
+		<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+		<v:ud v:nameU="CPMSetList" v:prompt="[CPM11]mnemonic,onClick,nextlv" v:val="VT4(visioTest)"/>
+	</v:userDefs>
+	<g id="shadow431-244" v:groupContext="shadow" v:shadowOffsetX="2.44929E-16" v:shadowOffsetY="-4" v:shadowType="3"
+			transform="matrix(1,0,0,1,0,4)" class="st13"/>
+	<rect x="0" y="1085.74" width="297.638" height="28.2784" fill="#3f3f3f" stroke="#bfbfbf" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" onclick="eventhandler()" mnemonic="AAAAA" nextlv="next mnemonic name" />
+	</g>
+</g>
+```

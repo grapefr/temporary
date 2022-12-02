@@ -1,8 +1,6 @@
 # SVG React 활용방안
 목적 : React에서 SVG 를 Load 하여 특정 attribute , value , Style을 제어
-
-
-
+   
 ## React 에서 SVG를 Load 하는 방법
 
 ### 1. \<img \/> 내 src를 추가 ( 부적합 )
@@ -21,7 +19,7 @@ Visio에서 Export한 SVG 파일 그대로 사용 불가 아래와 같이 치환
 |v:helloWorld|	vHelloWorld|   
 
 ### 3. Component 로 변환 후 render ( 적합 )
-React에서 제어가능   
+React Level에서 제어가능   
 Online converter : [svg2jsx](https://www.svgviewer.dev/svg-to-react-jsx)
 
 ## SVG Convert to React Component
@@ -78,7 +76,32 @@ flowchart LR
 	</g>
 </g>
 ```
-### 3차가공 (선택사항)
+### 3차가공 (Input Tag 추가)
+- input tag는 foreignObject tag를 이용하여 html 관련 tag 추가   
+```xml
+<g id="shape100-44" v:mID="100" v:groupContext="shape" transform="translate(132.094,-34.3701)">
+	<title>시트.100</title>
+	<desc>input2</desc>
+	<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+	<v:textRect cx="51.0236" cy="95.2441" width="102.05" height="11.3386"/>
+	<rect x="0" y="89.5748" width="102.047" height="11.3386" class="st3"/>
+	<text input="true" x="4" y="98.24" class="st4" v:langID="1042"><v:paragraph/><v:tabList/>input2</text>		
+</g>
+```
+```xml
+<g id="shape100-44" v:mID="100" v:groupContext="shape" transform="translate(132.094,-34.3701)">
+	<title>시트.100</title>
+	<desc>input2</desc>
+	<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+	<v:textRect cx="51.0236" cy="95.2441" width="102.05" height="11.3386"/>
+	<rect x="0" y="89.5748" width="102.047" height="11.3386" class="st3"/>
+        <foreignObject x="0" y="81" width="110" height="18">
+           <input id="input1" onChange="changeHandler()" />
+        </foreignObject>		
+</g>
+```
+
+### 4차가공 (선택사항)
 - script 추가 ( 선,후행 mnemonic 비교하여 특정 mnemonic 제어 )
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -114,3 +137,11 @@ flowchart LR
   </text>
 </svg>
 ```
+
+### React Component로 변환
+- row SVG 은 React와 연계할 수 없음 ( ex. react에서 선언한 function 을 svg에 할당 불가 )
+- 요구하는 기능 수준을 지원하는 svg 관련 라이브러리 부재.
+- 라이브러리 제작은 표준이 안잡혀있는 현재 POC 상황에 맞지 않음.
+- POC 진행을 위하여 SVG 파일을 Load, React Component로 변환하기로 결정.
+- 변환 Tool은 svgo 를 활용.
+- 앞선 1~4차 가공은 선처리로 완료되었다고 가정.

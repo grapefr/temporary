@@ -153,6 +153,7 @@ flowchart LR
   - react-svgmt -> 부적합
 - 라이브러리  제작으로 결정될 경우 실개발 시기에 Task 부여 필요.
 - POC에서는 jsx로 변환, 가공이 완료되었다는 가정하에 진행
+- 해당 사유로 인하여 Front Build 시 변환된 JSX 파일 필요
 
 ### 실개발시 결정해야할 사항
 - JS 제어 : svg 파일 가공, 최적화, 스크립트 작성까지 진행, React는 Data만 내림 ( 팝업 등 Function 기능은 모두 js )

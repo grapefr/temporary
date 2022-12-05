@@ -163,9 +163,9 @@ grid-layout과 호환성 검토 필요
 - 라이브러리 제작 : 필요한 기능은 아래 참고
   - svg(file or xml) Load 후 react element로 변환
   - selector를 이용하여 특정 element의 value 및 attr 제어   
-    - 패턴화된 xml 내 tree 구조가 중요
+    - 패턴화된 xml 내 tree 구조가 중요   
 
-#### 요구사항 반영을 위한 svg load 방안 제안안
+#### 요구사항 반영을 위한 svg load 방안 제안안   
 svg 파일 내 JS제어 + react용 라이브러리 제작 제안   
 가공 및 최적화
 - JS 제어

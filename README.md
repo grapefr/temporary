@@ -169,6 +169,6 @@ svg 파일 내 JS제어 + react용 라이브러리 제작
   - 선,후 관계형 mnemonic script 반영
 - 라이브러리 제작
   - XML Tree 탐색하여 모든 tag 를 React element 로 변환
-  - 특정 Element의 attr ( mnemonic, onclick, nextlv, input 등 ) 확인하여 react state, effect, set interval 
+  - 특정 Element의 attr ( mnemonic, onclick, nextlv, input 등 ) 확인하여 react state, effect, set intrval 연계
   - 모든 mnemonic 값을 수집, Data query 하여 value 반영
 

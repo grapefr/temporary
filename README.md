@@ -1,4 +1,4 @@
-# SVG React 활용방안
+# SVG React 활용방안 POC
 목적1 : React에서 SVG 를 Load 가능한지   
 목적2 : 해당 결과물을 Mimic에서 보이는 것처럼 색깔, 모양, 앞뒤 값 확인 후 스타일 변경가능한지   
 POC 방향 : VISIO로 만든 SVG 파일을 JSX로 변환, 특정 Element에 옵션을 선언하여 제어 

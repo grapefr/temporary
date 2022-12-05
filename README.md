@@ -140,7 +140,6 @@ flowchart LR
 
 ### 최적화
 - 불필요한 tag 및 attr 등 제거
-- 과도한 Data 변환 및 제거
 - react를 지원하는 SVGR 이라는 Tool 을 이용
   - svgr : 확장자 변환 ( .svg -> .jsx )
   - svgo : 최적화 ( .svg -> .svg )

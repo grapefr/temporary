@@ -138,6 +138,14 @@ flowchart LR
 </svg>
 ```
 
+### 최적화
+- 불필요한 tag 및 attr 등 제거
+- 과도한 Data 변환 및 제거
+- react를 지원하는 SVGR 라곻는 Tool 을 이용하여 적용
+  - svgr : 확장자 변환 ( .svg -> .jsx )
+  - svgo : 최적화 ( .svg -> .svg )
+  - svgr은 svgo를 내장하고 있으며 변환 수행시 config에 따라 최적화가 수행됨
+
 ### React Component로 변환
 - row SVG 은 React와 연계할 수 없음 ( ex. react에서 선언한 function 을 svg에 할당 불가 )
 - 요구하는 기능 수준을 지원하는 svg 관련 라이브러리 부재.

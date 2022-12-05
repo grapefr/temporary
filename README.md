@@ -25,7 +25,7 @@ Online converter : [svg2jsx](https://www.svgviewer.dev/svg-to-react-jsx)
 ## SVG Convert to React Component
 ```mermaid
 flowchart LR
-    VISIO -- 1차가공 --> SVG -- 2차가공 --> SVG_v2 -- n차가공 --> SVG_vN --> React_load
+    VISIO -- 1차가공 --> SVG -- 2차가공 --> SVG_v2 -- n차가공 --> SVG_vN -- 최적화 --> React_load
 ```
 ### 1차가공
 - 스탠실을 이용한 Custom Props 추가  => 표준 협의 필요     

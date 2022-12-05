@@ -156,8 +156,6 @@ flowchart LR
 - POC에서는 jsx로 변환, 가공이 완료되었다는 가정하에 진행
 
 ### 실개발시 결정해야할 사항
-#### svg load 방안
-grid-layout과 호환성 검토 필요
 - JS 제어 : svg 파일 가공, 최적화, 스크립트 작성까지 진행, React는 Data만 내림 ( 팝업 등 Function 기능은 모두 js )
 - React 제어 : svg 파일 가공 및 최적화까지 진행, Component로 변환하여 스크립트, 팝업, fetch 등을 React에서 제어
 - 라이브러리 제작 : 필요한 기능은 아래 참고
@@ -165,7 +163,7 @@ grid-layout과 호환성 검토 필요
   - selector를 이용하여 특정 element의 value 및 attr 제어   
     - 패턴화된 xml 내 tree 구조가 중요   
 
-#### 요구사항 반영을 위한 svg load 방안 제안안   
+### 요구사항 반영을 위한 svg load 방안 제안안   
 svg 파일 내 JS제어 + react용 라이브러리 제작 제안   
 가공 및 최적화
 - JS 제어

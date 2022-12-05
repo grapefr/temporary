@@ -76,7 +76,7 @@ flowchart LR
 	</g>
 </g>
 ```
-### 3차가공 (Input Tag 추가)
+### 3차가공 (Input, 선택사항)
 - input tag는 foreignObject tag를 이용하여 html 관련 tag 추가   
 ```xml
 <g id="shape100-44" v:mID="100" v:groupContext="shape" transform="translate(132.094,-34.3701)">

@@ -11,7 +11,7 @@ POC 방향 : VISIO로 만든 SVG 파일을 JSX로 변환, 특정 Element에 옵�
 ```   
 ### 2. svg 내 namespace 형식 치환 후 render
 Visio에서 Export한 SVG 파일 그대로 사용 불가 아래와 같이 치환 필요   
-svg row file 은 react에서 제어 불가 ( javascript로는 가능 )
+svg row file 은 react에서 제어 불가
 |AS-IS	|TO-BE|
 |-------|-------
 |xmlns:xlink|	xmlnsXlink	|

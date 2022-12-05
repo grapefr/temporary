@@ -148,11 +148,11 @@ flowchart LR
 
 ### React Component로 변환
 - row SVG 은 React와 연계할 수 없음 ( ex. react에서 선언한 function 을 svg에 할당 불가 )
-- 요구하는 기능 수준을 지원하는 svg 관련 라이브러리 부재.
-- 라이브러리 제작은 표준이 안잡혀있는 현재 POC 상황에 맞지 않음.
-- POC 진행을 위하여 SVG 파일을 Load, React Component로 변환하기로 결정.
-- 변환 Tool은 svgo 를 활용.
-- 앞선 1~4차 가공은 선처리로 완료되었다고 가정.
+- 요구하는 기능 수준을 지원하는 svg 관련 라이브러리는 없음.
+  - react-external-svg -> 부적합
+  - react-svgmt -> 부적합
+- 라이브러리 제작으로 결정될 경우 실개발 시기에 Task 부여 필요.
+- POC에서는 jsx로 변환, 가공이 완료되었다는 가정하에 진행
 
 ### 변환 후 남은 작업
 - 선,후행 mnemonic 상태 비교하여 특정 mnemonic 제어 Function 추가

@@ -8,8 +8,8 @@
 <img src="./svg.svg" />
 ```   
 ### 2. svg 내 namespace 형식 치환 후 render
-Visio에서 Export한 SVG 파일 그대로 사용 불가 아래와 같이 치환 필요
-단, svg row file 이나 마찬가지므로 react에서 제어 불가 ( javascript로 가능 )
+Visio에서 Export한 SVG 파일 그대로 사용 불가 아래와 같이 치환 필요   
+svg row file 은 react에서 제어 불가 ( javascript로는 가능 )
 |AS-IS	|TO-BE|
 |-------|-------
 |xmlns:xlink|	xmlnsXlink	|
@@ -25,15 +25,15 @@ Online converter : [svg2jsx](https://www.svgviewer.dev/svg-to-react-jsx)
 ## SVG Convert to React Component
 ```mermaid
 flowchart LR
-    VISIO -- 1차가공 --> SVG -- 2차가공 --> SVG_v2 --> n차가공 --> SVG_vN --> React_load
+    VISIO -- 1차가공 --> SVG -- 2차가공 --> SVG_v2 -- n차가공 --> SVG_vN --> React_load
 ```
 ### 1차가공
-- 스탠실을 이용한 Custom Props 추가
+- 스탠실을 이용한 Custom Props 추가  => 표준 협의 필요     
   - onclick="eventHandler(val)"
   - mnemonic="AAAAA"
-  - nextlv="next mnemonic name"
+  - nextlv="next mnemonic || svg name"
   - input="true"
-  - script="AAAAA & BBBBB" => 표준 협의 필요      
+  - script="AAAAA & BBBBB"    
 - 결과
 ```xml
 	<style type="text/css">

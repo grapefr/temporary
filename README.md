@@ -96,7 +96,7 @@ flowchart LR
 	<v:textRect cx="51.0236" cy="95.2441" width="102.05" height="11.3386"/>
 	<rect x="0" y="89.5748" width="102.047" height="11.3386" class="st3"/>
         <foreignObject x="0" y="81" width="110" height="18">
-           <input id="input1" onChange="changeHandler()" />
+           <input id="input2" onChange="changeHandler()" />
         </foreignObject>		
 </g>
 ```

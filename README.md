@@ -165,13 +165,13 @@ grid-layout과 호환성 검토 필요
   - selector를 이용하여 특정 element의 value 및 attr 제어   
     - 패턴화된 xml 내 tree 구조가 중요
 
-#### 요구사항 반영을 위한 ktds svg load 방안
+#### 요구사항 반영을 위한 svg load 방안 제안안
 svg 파일 내 JS제어 + react용 라이브러리 제작 제안   
 가공 및 최적화
 - JS 제어
   - 선,후 관계형 mnemonic script 반영
 - 라이브러리 제작
   - XML Tree 탐색하여 모든 tag 를 React element 로 변환
-  - 특정 Element의 attr ( mnemonic, onclick, nextlv, input 등 ) 확인하여 react와 연동
+  - 특정 Element의 attr ( mnemonic, onclick, nextlv, input 등 ) 확인하여 react state, effect, set interval 
   - 모든 mnemonic 값을 수집, Data query 하여 value 반영
 

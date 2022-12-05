@@ -164,7 +164,7 @@ flowchart LR
     - 패턴화된 xml 내 tree 구조가 중요   
 
 ### 요구사항 반영을 위한 svg load 방안 제안안   
-svg 파일 내 JS제어 + react용 라이브러리 제작 제안   
+svg 파일 내 JS제어 + react용 라이브러리 제작    
 - JS 제어
   - 선,후 관계형 mnemonic script 반영
 - 라이브러리 제작

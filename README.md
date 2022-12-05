@@ -1,5 +1,6 @@
 # SVG React 활용방안
-목적 : React에서 SVG 를 Load 하여 특정 attribute , value , Style을 제어
+목적1 : React에서 SVG 를 Load 가능한지특정 attribute , value , Style을 제어 가능한지   
+목적2 : 해당 결과물을 Mimic에서 보이는 것처럼 색깔, 모양, 앞뒤 값 확인 후 스타일 변경가능한지
    
 ## React 에서 SVG를 Load 하는 방법
 

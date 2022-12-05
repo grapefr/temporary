@@ -148,11 +148,30 @@ flowchart LR
 
 ### React Component로 변환
 - row SVG 은 React와 연계할 수 없음 ( ex. react에서 선언한 function 을 svg에 할당 불가 )
+- Tree 구조가 패턴화되어있지 않음
 - 요구하는 기능 수준을 지원하는 svg 관련 라이브러리는 없음.
   - react-external-svg -> 부적합
   - react-svgmt -> 부적합
 - 라이브러리  제작으로 결정될 경우 실개발 시기에 Task 부여 필요.
 - POC에서는 jsx로 변환, 가공이 완료되었다는 가정하에 진행
 
-### 변환 후 남은 작업
-- 선,후행 mnemonic 상태 비교하여 특정 mnemonic 제어 Function 추가
+### 실개발시 결정해야할 사항
+#### svg load 방안
+grid-layout과 호환성 검토 필요
+- JS 제어 : svg 파일 가공, 최적화, 스크립트 작성까지 진행, React는 Data만 내림 ( 팝업 등 Function 기능은 모두 js )
+- React 제어 : svg 파일 가공 및 최적화까지 진행, Component로 변환하여 스크립트, 팝업, fetch 등을 React에서 제어
+- 라이브러리 제작 : 필요한 기능은 아래 참고
+  - svg(file or xml) Load 후 react element로 변환
+  - selector를 이용하여 특정 element의 value 및 attr 제어   
+    - 패턴화된 xml 내 tree 구조가 중요
+
+#### 요구사항 반영을 위한 ktds svg load 방안
+svg 파일 내 JS제어 + react용 라이브러리 제작 제안   
+가공 및 최적화
+- JS 제어
+  - 선,후 관계형 mnemonic script 반영
+- 라이브러리 제작
+  - XML Tree 탐색하여 모든 tag 를 React element 로 변환
+  - 특정 Element의 attr ( mnemonic, onclick, nextlv, input 등 ) 확인하여 react와 연동
+  - 모든 mnemonic 값을 수집, Data query 하여 value 반영
+
